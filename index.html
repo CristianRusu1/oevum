@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oevum | Your Unfair Advantage in Meetings</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #030303;
+            color: white;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+        }
+
+        .glow {
+            box-shadow: 0 0 50px rgba(16, 185, 129, 0.15);
+        }
+
+        .text-gradient {
+            background: linear-gradient(to bottom right, #ffffff, #9ca3af);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .animate-pulse-slow {
+            animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.4;
+            }
+        }
+
+        .hud-border {
+            border: 1px solid rgba(16, 185, 129, 0.4);
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #10b981 !important;
+            box-shadow: 0 0 15px rgba(16, 185, 129, 0.2);
+        }
+    </style>
+</head>
+
+<body class="overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full z-50 glass border-b border-white/5 py-5">
+        <div class="max-w-7xl mx-auto px-8 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-9 h-9 bg-emerald-500 rounded-xl flex items-center justify-center glow">
+                    <i class="fas fa-wave-square text-black text-sm"></i>
+                </div>
+                <span class="font-black tracking-tight text-2xl">OEVUM</span>
+            </div>
+            <div class="hidden md:flex gap-10 text-xs font-bold uppercase tracking-widest text-gray-500">
+                <a href="#benefits" class="hover:text-white transition-colors">The Edge</a>
+                <a href="#scenarios" class="hover:text-white transition-colors">Usage</a>
+                <a href="#waitlist" class="hover:text-white transition-colors">Waitlist</a>
+            </div>
+            <a href="#waitlist"
+                class="px-6 py-2.5 bg-white text-black text-[10px] font-black tracking-widest uppercase rounded-full hover:bg-emerald-400 transition-all active:scale-95">
+                JOIN WAITLIST
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-48 pb-24 px-8">
+        <div
+            class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[700px] bg-gradient-to-b from-emerald-500/10 to-transparent -z-10 blur-[120px] opacity-40">
+        </div>
+
+        <div class="max-w-6xl mx-auto text-center">
+            <div
+                class="inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-emerald-500/5 border border-emerald-500/10 text-emerald-400 text-[9px] font-black tracking-[0.2em] uppercase mb-8 animate-pulse-slow">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                The Silence of Mastery
+            </div>
+            <h1 class="text-6xl md:text-9xl font-black tracking-tighter mb-10 text-gradient leading-[0.9]">
+                Own every <br> conversation.
+            </h1>
+            <p class="text-gray-500 text-lg md:text-2xl max-w-3xl mx-auto leading-relaxed mb-12 font-medium">
+                Stop worrying about what to say next. Oevum is your silent partner that anticipates questions and
+                whispers the perfect answers, leaving you to focus on the person.
+            </p>
+            <div class="flex flex-col md:flex-row gap-5 justify-center items-center">
+                <a href="#waitlist"
+                    class="w-full md:w-auto px-10 py-5 bg-emerald-500 text-black font-black rounded-2xl glow hover:scale-105 transition-transform active:scale-95 shadow-2xl shadow-emerald-500/20">
+                    SECURE YOUR SPOT
+                </a>
+                <button
+                    class="w-full md:w-auto px-10 py-5 glass text-white font-bold rounded-2xl hover:bg-white/5 transition-all border border-white/10">
+                    SEE THE FLOW
+                </button>
+            </div>
+        </div>
+
+        <!-- App Mockup Preview -->
+        <div class="max-w-6xl mx-auto mt-24 relative">
+            <div class="absolute -top-20 -left-20 w-64 h-64 bg-emerald-500/10 blur-[100px] rounded-full"></div>
+            <div class="absolute -bottom-20 -right-20 w-64 h-64 bg-blue-500/10 blur-[100px] rounded-full"></div>
+            <div class="glass rounded-[40px] p-2 md:p-3 relative overflow-hidden border border-white/5 shadow-2xl">
+                <div
+                    class="aspect-video bg-[#0a0a0a] rounded-[32px] flex items-center justify-center relative overflow-hidden">
+                    <img src="https://img.freepik.com/free-photo/colleagues-having-video-conference-coronavirus-pandemic_53876-138970.jpg?semt=ais_hybrid&w=740&q=80"
+                        alt="Workspace" class="opacity-20 grayscale scale-110 object-cover w-full h-full">
+
+                    <!-- HUD Overlay -->
+                    <div
+                        class="absolute right-12 top-1/2 -translate-y-1/2 w-80 glass p-6 rounded-3xl shadow-2xl hud-border scale-110">
+                        <div class="flex justify-between items-center mb-5">
+                            <div class="flex items-center gap-2">
+                                <div class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div>
+                                <span class="text-[9px] font-black text-emerald-500 uppercase tracking-widest">Oevum
+                                    Live</span>
+                            </div>
+                            <i class="fas fa-ellipsis-h text-gray-600 text-[10px]"></i>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="p-3 bg-white/[0.03] rounded-xl border border-white/5">
+                                <p class="text-[8px] font-black text-gray-500 mb-2 tracking-widest uppercase">The
+                                    Question</p>
+                                <p class="text-xs text-gray-300 leading-snug">"How exactly do we plan to handle the
+                                    phase two migration?"</p>
+                            </div>
+                            <div
+                                class="p-4 bg-emerald-500 text-black rounded-xl cursor-pointer hover:bg-emerald-400 transition-all shadow-xl shadow-emerald-500/10">
+                                <p class="text-[8px] font-black opacity-60 mb-2 tracking-widest uppercase">The Insight
+                                </p>
+                                <p class="text-xs font-bold leading-tight">"Phase two centers on the container switch.
+                                    We'll mirror the traffic first to ensure zero downtime before cutting over the main
+                                    database..."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Bento Grid -->
+    <section id="benefits" class="max-w-7xl mx-auto px-8 py-32">
+        <div class="text-center mb-20">
+            <h2 class="text-5xl font-black mb-6 tracking-tight">Focus on the person. We'll handle the details.</h2>
+            <p class="text-gray-500 max-w-xl mx-auto">Oevum removes the cognitive load of high-stakes conversations,
+                giving you a second brain that never blinks.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div
+                class="md:col-span-2 glass p-10 rounded-[32px] flex flex-col justify-between group hover:border-emerald-500/30 transition-all">
+                <div>
+                    <div class="w-12 h-12 bg-emerald-500/10 rounded-2xl flex items-center justify-center mb-8">
+                        <i class="fas fa-eye-slash text-emerald-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-3xl font-black mb-4 tracking-tight">Invisible Confidence</h3>
+                    <p class="text-gray-500 leading-relaxed max-w-lg">Oevum lives in the background, appearing only
+                        when it matters. No one sees it, but everyone hears the difference in your delivery. Stay locked
+                        in without ever looking away from your camera.</p>
+                </div>
+                <div class="mt-10 flex gap-3">
+                    <span
+                        class="px-4 py-1.5 bg-white/5 rounded-full text-[9px] font-black tracking-widest uppercase text-gray-400">Zero
+                        Distraction</span>
+                    <span
+                        class="px-4 py-1.5 bg-white/5 rounded-full text-[9px] font-black tracking-widest uppercase text-gray-400">Pure
+                        Presence</span>
+                </div>
+            </div>
+            <div class="glass p-10 rounded-[32px] group hover:border-emerald-500/30 transition-all">
+                <div class="w-12 h-12 bg-blue-500/10 rounded-2xl flex items-center justify-center mb-8">
+                    <i class="fas fa-bolt-lightning text-blue-500 text-xl"></i>
+                </div>
+                <h3 class="text-2xl font-black mb-4 tracking-tight">Expert Authority</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Speak with the combined expertise of your entire
+                    company. Oevum pulls from your preparation notes to ensure you never stumble over a technicality
+                    or a price point again.</p>
+            </div>
+            <div class="glass p-10 rounded-[32px] group hover:border-emerald-500/30 transition-all">
+                <div class="w-12 h-12 bg-amber-500/10 rounded-2xl flex items-center justify-center mb-8">
+                    <i class="fas fa-clock text-amber-500 text-xl"></i>
+                </div>
+                <h3 class="text-2xl font-black mb-4 tracking-tight">Eliminate Silences</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Awkward pauses while you "search for the info" are
+                    gone. Oevum anticipates the curveballs and delivers the answer before they even finish the
+                    sentence.</p>
+            </div>
+            <div
+                class="md:col-span-2 glass p-10 rounded-[32px] flex items-center gap-10 group hover:border-emerald-500/30 transition-all">
+                <div class="w-2/3">
+                    <h3 class="text-3xl font-black mb-4 tracking-tight">Total Privacy</h3>
+                    <p class="text-gray-500 leading-relaxed">Your conversations are your own. Oevum is designed to
+                        listen and suggest, not record and store. Your data never leaves your session, ensuring absolute
+                        discretion for sensitive calls.</p>
+                </div>
+                <div class="w-1/3 flex justify-center">
+                    <div
+                        class="w-24 h-24 bg-emerald-500/5 rounded-full flex items-center justify-center border border-emerald-500/10">
+                        <i class="fas fa-lock text-emerald-500 text-4xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases / Scenarios -->
+    <section id="scenarios" class="py-32 px-8 border-y border-white/5 bg-[#050505]">
+        <div class="max-w-7xl mx-auto text-center mb-20">
+            <h2 class="text-5xl font-black tracking-tighter">Built for the moments that matter.</h2>
+        </div>
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-10">
+            <div class="space-y-6 p-8 glass rounded-3xl">
+                <div
+                    class="w-10 h-10 rounded-xl bg-purple-500/10 flex items-center justify-center border border-purple-500/20">
+                    <i class="fas fa-code text-purple-400"></i>
+                </div>
+                <h4 class="text-xl font-black uppercase tracking-widest">The Interview</h4>
+                <p class="text-sm text-gray-500 leading-relaxed">Stay calm under pressure. When the technical curveballs
+                    come, Oevum gives you the exact terminology you need to nail the response.</p>
+            </div>
+            <div class="space-y-6 p-8 glass rounded-3xl">
+                <div
+                    class="w-10 h-10 rounded-xl bg-emerald-500/10 flex items-center justify-center border border-emerald-500/20">
+                    <i class="fas fa-handshake text-emerald-400"></i>
+                </div>
+                <h4 class="text-xl font-black uppercase tracking-widest">The Negotiation</h4>
+                <p class="text-sm text-gray-500 leading-relaxed">Stay firm on your numbers. Oevum keeps your key
+                    rebuttals and market data points right in your line of sight, so you never settle for less.</p>
+            </div>
+            <div class="space-y-6 p-8 glass rounded-3xl">
+                <div
+                    class="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center border border-blue-500/20">
+                    <i class="fas fa-users text-blue-400"></i>
+                </div>
+                <h4 class="text-xl font-black uppercase tracking-widest">The Client Pitch</h4>
+                <p class="text-sm text-gray-500 leading-relaxed">Handle objections like a pro. Oevum scans your case
+                    studies to suggest the most relevant success stories as soon as a concern is raised.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Waitlist Section -->
+    <section id="waitlist" class="py-40 px-8 text-center scroll-mt-20">
+        <div class="max-w-4xl mx-auto glass p-12 md:p-20 rounded-[60px] border-emerald-500/20 glow">
+            <h2 class="text-5xl md:text-6xl font-black mb-6 tracking-tighter">Ready to rise above <br> the noise?</h2>
+            <p class="text-gray-500 mb-12 text-lg md:text-xl font-medium">Join the waitlist for early access to the v2.0
+                Realtime Engine.</p>
+
+            <form class="max-w-md mx-auto space-y-4 md:space-y-0 md:flex md:gap-4 no-drag"
+                onsubmit="event.preventDefault(); alert('You have been added to the waitlist!');">
+                <input type="email" placeholder="Enter your email" required
+                    class="w-full px-6 py-5 bg-black/40 border border-white/10 rounded-2xl text-white font-medium focus:border-emerald-500 transition-all">
+                <button type="submit"
+                    class="w-full md:w-auto px-10 py-5 bg-emerald-500 text-black font-black rounded-2xl hover:scale-105 transition-all shadow-xl shadow-emerald-500/20 whitespace-nowrap">
+                    JOIN WAITLIST
+                </button>
+            </form>
+
+            <p class="mt-8 text-[9px] text-gray-600 uppercase tracking-[0.3em] font-black">Limited capacity for initial
+                roll-out • Zero-Storage Privacy</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/5 py-16 px-8 bg-[#030303]">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
+            <div class="flex items-center gap-3">
+                <div class="w-7 h-7 bg-emerald-500 rounded-lg flex items-center justify-center">
+                    <i class="fas fa-wave-square text-black text-[10px]"></i>
+                </div>
+                <span class="font-black tracking-tight text-lg">OEVUM</span>
+            </div>
+            <p class="text-[9px] text-gray-600 uppercase tracking-[0.2em] font-black">Clarity in a world of distraction.
+            </p>
+            <div class="flex gap-8 text-gray-500 text-lg">
+                <a href="#" class="hover:text-white transition-colors"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="hover:text-white transition-colors"><i class="fab fa-github"></i></a>
+                <a href="#" class="hover:text-white transition-colors"><i class="fab fa-discord"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
