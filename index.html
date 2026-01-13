@@ -13,7 +13,9 @@
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
             background-color: #030303;
+            overflow-x: hidden;
             color: white;
+            position: relative;
         }
 
         .glass {
@@ -60,33 +62,30 @@
     </style>
 </head>
 
-<body class="overflow-x-hidden">
+<body class="overflow-x-hidden w-full relative">
 
-    <!-- Navbar -->
-    <nav class="fixed top-0 w-full z-50 glass border-b border-white/5 py-5">
-        <div class="max-w-7xl mx-auto px-8 flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <!-- <div class="w-9 h-9 bg-emerald-500 rounded-xl flex items-center justify-center glow">
-                    <i class="fas fa-wave-square text-black text-sm"></i>
-                </div> -->
-                <span class="font-black tracking-tight text-2xl">OEVUM</span>
+    <nav class="fixed top-0 left-0 right-0 z-[100] glass border-b border-white/5 py-4">
+        <div class="max-w-7xl mx-auto px-4 md:px-8 flex justify-between items-center">
+            <div class="flex items-center">
+                <span class="font-black tracking-tighter text-lg md:text-2xl">OEVUM</span>
             </div>
             <div class="hidden md:flex gap-10 text-xs font-bold uppercase tracking-widest text-gray-500">
                 <a href="#benefits" class="hover:text-white transition-colors">The Edge</a>
                 <a href="#scenarios" class="hover:text-white transition-colors">Usage</a>
                 <a href="#waitlist" class="hover:text-white transition-colors">Waitlist</a>
             </div>
-            <a href="#waitlist"
-                class="px-6 py-2.5 bg-white text-black text-[10px] font-black tracking-widest uppercase rounded-full hover:bg-emerald-400 transition-all active:scale-95">
-                JOIN WAITLIST
-            </a>
+            <div class="flex-shrink-0">
+                <a href="#waitlist"
+                    class="inline-block px-4 py-2 bg-white text-black text-[9px] md:text-[10px] font-black tracking-widest uppercase rounded-full hover:bg-emerald-400 transition-all active:scale-95">
+                    JOIN WAITLIST
+                </a>
+            </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="relative pt-48 pb-24 px-8">
+    <section class="relative pt-40 md:pt-48 pb-24 px-4 md:px-8 overflow-hidden">
         <div
-            class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[700px] bg-gradient-to-b from-emerald-500/10 to-transparent -z-10 blur-[120px] opacity-40">
+            class="absolute top-0 left-1/2 -translate-x-1/2 w-[90vw] h-[600px] bg-gradient-to-b from-emerald-500/10 to-transparent -z-10 blur-[100px] opacity-40">
         </div>
 
         <div class="max-w-6xl mx-auto text-center">
@@ -95,60 +94,53 @@
                 <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
                 Think Faster
             </div>
-            <h1 class="text-6xl md:text-9xl font-black tracking-tighter mb-10 text-gradient leading-[0.9]">
+            <h1
+                class="text-5xl md:text-8xl lg:text-9xl font-black tracking-tighter mb-10 text-gradient leading-[0.9] break-words">
                 Own every <br> conversation.
             </h1>
-            <p class="text-gray-500 text-lg md:text-2xl max-w-3xl mx-auto leading-relaxed mb-12 font-medium">
+            <p class="text-gray-500 text-base md:text-2xl max-w-3xl mx-auto leading-relaxed mb-12 font-medium px-4">
                 Stop worrying about what to say next. Oevum is your silent partner that anticipates questions and
-                whispers the perfect answers, leaving you to focus on the person.
+                whispers the perfect answers.
             </p>
-            <div class="flex flex-col md:flex-row gap-5 justify-center items-center">
+            <div class="flex flex-col md:flex-row gap-5 justify-center items-center px-6">
                 <a href="#waitlist"
                     class="w-full md:w-auto px-10 py-5 bg-emerald-500 text-black font-black rounded-2xl glow hover:scale-105 transition-transform active:scale-95 shadow-2xl shadow-emerald-500/20">
                     SECURE YOUR SPOT
                 </a>
-                <!-- <button
-                    class="w-full md:w-auto px-10 py-5 glass text-white font-bold rounded-2xl hover:bg-white/5 transition-all border border-white/10">
-                    SEE THE FLOW
-                </button> -->
             </div>
         </div>
 
-        <!-- App Mockup Preview -->
-        <div class="max-w-6xl mx-auto mt-24 relative">
-            <div class="absolute -top-20 -left-20 w-64 h-64 bg-emerald-500/10 blur-[100px] rounded-full"></div>
-            <div class="absolute -bottom-20 -right-20 w-64 h-64 bg-blue-500/10 blur-[100px] rounded-full"></div>
+        <div class="max-w-6xl mx-auto mt-24 relative px-2">
             <div class="glass rounded-[40px] p-2 md:p-3 relative overflow-hidden border border-white/5 shadow-2xl">
                 <div
                     class="aspect-video bg-[#0a0a0a] rounded-[32px] flex items-center justify-center relative overflow-hidden">
                     <img src="https://img.freepik.com/free-photo/colleagues-having-video-conference-coronavirus-pandemic_53876-138970.jpg?semt=ais_hybrid&w=740&q=80"
                         alt="Workspace" class="opacity-20 grayscale scale-110 object-cover w-full h-full">
 
-                    <!-- HUD Overlay -->
                     <div
-                        class="absolute right-12 top-1/2 -translate-y-1/2 w-80 glass p-6 rounded-3xl shadow-2xl hud-border scale-110">
-                        <div class="flex justify-between items-center mb-5">
+                        class="absolute right-2 md:right-12 top-1/2 -translate-y-1/2 w-[260px] md:w-80 glass p-4 md:p-6 rounded-3xl shadow-2xl hud-border scale-90 md:scale-100 transition-all">
+                        <div class="flex justify-between items-center mb-4">
                             <div class="flex items-center gap-2">
                                 <div class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div>
-                                <span class="text-[9px] font-black text-emerald-500 uppercase tracking-widest">Oevum
+                                <span
+                                    class="text-[8px] md:text-[9px] font-black text-emerald-500 uppercase tracking-widest">Oevum
                                     Live</span>
                             </div>
                             <i class="fas fa-ellipsis-h text-gray-600 text-[10px]"></i>
                         </div>
-                        <div class="space-y-4">
+                        <div class="space-y-3">
                             <div class="p-3 bg-white/[0.03] rounded-xl border border-white/5">
-                                <p class="text-[8px] font-black text-gray-500 mb-2 tracking-widest uppercase">The
+                                <p class="text-[8px] font-black text-gray-500 mb-1 tracking-widest uppercase">The
                                     Question</p>
-                                <p class="text-xs text-gray-300 leading-snug">"How exactly do we plan to handle the
-                                    phase two migration?"</p>
+                                <p class="text-[10px] md:text-xs text-gray-300 leading-tight">"How exactly do we plan to
+                                    handle the phase two migration?"</p>
                             </div>
                             <div
-                                class="p-4 bg-emerald-500 text-black rounded-xl cursor-pointer hover:bg-emerald-400 transition-all shadow-xl shadow-emerald-500/10">
-                                <p class="text-[8px] font-black opacity-60 mb-2 tracking-widest uppercase">The Insight
+                                class="p-3 md:p-4 bg-emerald-500 text-black rounded-xl shadow-xl shadow-emerald-500/10">
+                                <p class="text-[8px] font-black opacity-60 mb-1 tracking-widest uppercase">The Insight
                                 </p>
-                                <p class="text-xs font-bold leading-tight">"Phase two centers on the container switch.
-                                    We'll mirror the traffic first to ensure zero downtime before cutting over the main
-                                    database..."</p>
+                                <p class="text-[10px] md:text-xs font-bold leading-tight">"Phase two centers on the
+                                    container switch. We'll mirror traffic first..."</p>
                             </div>
                         </div>
                     </div>
@@ -166,12 +158,12 @@
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div
-                class="md:col-span-2 glass p-10 rounded-[32px] flex flex-col justify-between group hover:border-emerald-500/30 transition-all">
+                class="md:col-span-2 glass p-6 md:p-10 rounded-[32px] flex flex-col justify-between group hover:border-emerald-500/30 transition-all">
                 <div>
                     <div class="w-12 h-12 bg-emerald-500/10 rounded-2xl flex items-center justify-center mb-8">
                         <i class="fas fa-eye-slash text-emerald-500 text-xl"></i>
                     </div>
-                    <h3 class="text-3xl font-black mb-4 tracking-tight">Invisible Confidence</h3>
+                    <h3 class="text-2xl font-black mb-4 tracking-tight">Invisible Confidence</h3>
                     <p class="text-gray-500 leading-relaxed max-w-lg">Oevum lives in the background, appearing only
                         when it matters. No one sees it, but everyone hears the difference in your delivery. Stay locked
                         in without ever looking away from your camera.</p>
@@ -185,7 +177,7 @@
                         Presence</span>
                 </div>
             </div>
-            <div class="glass p-10 rounded-[32px] group hover:border-emerald-500/30 transition-all">
+            <div class="glass p-6 md:p-10 rounded-[32px] group hover:border-emerald-500/30 transition-all">
                 <div class="w-12 h-12 bg-blue-500/10 rounded-2xl flex items-center justify-center mb-8">
                     <i class="fas fa-bolt-lightning text-blue-500 text-xl"></i>
                 </div>
@@ -194,7 +186,7 @@
                     company. Oevum pulls from your preparation notes to ensure you never stumble over a technicality
                     or a price point again.</p>
             </div>
-            <div class="glass p-10 rounded-[32px] group hover:border-emerald-500/30 transition-all">
+            <div class="glass p-6 md:p-10 rounded-[32px] group hover:border-emerald-500/30 transition-all">
                 <div class="w-12 h-12 bg-amber-500/10 rounded-2xl flex items-center justify-center mb-8">
                     <i class="fas fa-clock text-amber-500 text-xl"></i>
                 </div>
@@ -204,17 +196,17 @@
                     sentence.</p>
             </div>
             <div
-                class="md:col-span-2 glass p-10 rounded-[32px] flex items-center gap-10 group hover:border-emerald-500/30 transition-all">
-                <div class="w-2/3">
-                    <h3 class="text-3xl font-black mb-4 tracking-tight">Total Privacy</h3>
+                class="md:col-span-2 glass p-6 md:p-10 rounded-[32px] flex flex-col-reverse md:flex-row items-start md:items-center gap-6 md:gap-10 group hover:border-emerald-500/30 transition-all">
+                <div class="w-full md:w-2/3">
+                    <h3 class="text-2xl font-black mb-4 tracking-tight">Total Privacy</h3>
                     <p class="text-gray-500 leading-relaxed">Your conversations are your own. Oevum is designed to
                         listen and suggest, not record and store. Your data never leaves your session, ensuring absolute
                         discretion for sensitive calls.</p>
                 </div>
-                <div class="w-1/3 flex justify-center">
+                <div class="w-full md:w-1/3 flex justify-start md:justify-center">
                     <div
-                        class="w-24 h-24 bg-emerald-500/5 rounded-full flex items-center justify-center border border-emerald-500/10">
-                        <i class="fas fa-lock text-emerald-500 text-4xl"></i>
+                        class="w-12 h-12 bg-emerald-500/5 rounded-full flex items-center justify-center border border-emerald-500/10">
+                        <i class="fas fa-lock text-emerald-500 text-xl"></i>
                     </div>
                 </div>
             </div>
